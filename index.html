@@ -1,12 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, inicial-scale=1.0">
-        <title>Gabi Code Test</title>
-    </head>
-    <body>
-        <h1>. ݁₊ ⊹ . ݁˖ . ݁hi, welcome to my first website! . ݁₊ ⊹ . ݁˖ . ݁</h1>
-        <h2>qualquer coisa</h2>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabi Code Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #eecbee;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.6em;
+            text-align: center;
+        }
+
+        /* .title {} */
+
+        .subtitle {
+            margin-top: 200px;
+        }
+
+        p {
+            margin-bottom: 40px;
+        }
+
+        .containerArea {
+            width: 100%;
+            height: 170px;
+            display: flex;
+            justify-content: center;
+            position: relative; /* Adiciona posição relativa ao contêiner pai */
+        }
+
+        .container {
+            width: 70%;
+            height: 100%;
+            background-color: #caabff;
+            border: 0.8px solid rgba(0, 0, 0, 0.733); /* Correção na borda */
+            position: relative; /* Adiciona posição relativa ao contêiner */
+        }
+
+        .apelo {
+            margin-top: 10%;
+            font-size: 12px;
+        }
+
+        .escolhaContainer {
+            height: 100px;
+            width: 100%;
+            /* background-color: aquamarine; */
+            display: flex;
+            /* justify-content: space-evenly; */
+            align-items: center; /* Adiciona alinhamento vertical */
+            position: relative; /* Adiciona posição relativa ao contêiner */
+        }
+
+        .escolhaContainer p {
+            margin: 0; /* Remove margens padrão dos parágrafos */
+            font-size: 16px; /* Define um tamanho de fonte adequado */
+        }
+
+        #aleatorio {
+            position: absolute; /* Faz o elemento se mover dentro do contêiner */
+            cursor: pointer;
+        }
+
+        .simArea {
+            height: 100%;
+            /* background-color: red; */
+            width: 30%;
+            /* align-self:flex-start; */
+            float: left;
+            position: relative;
+        }
+
+        .naoArea {
+            /* position: absolute; */
+            /* background-color: green; */
+            width: 70%;
+            height: 100%;
+            float:right;
+            /* align-self: flex-end; */
+            position: relative;
+        }
+
+        .boasVindas {
+            height: 1200px;
+            width: 100%;
+            background-color: rgb(127, 142, 255);
+            display: none;
+            align-items: center; /* Adiciona alinhamento vertical */
+            /* position: */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Colocar um texto de bem vindo  -->
+    <h1 class="title">hi, my name is gabi</h1>
+    <h2>. ݁₊ ⊹ . ݁˖ . ݁esse é meu primeiro website. ݁₊ ⊹ . ݁˖ . </h2>
+    <h2 class="subtitle">antes de tudo, tenho uma pergunta importante:</h2>
+    <div class="containerArea">
+        <div class="container">
+            <p class="apelo">você aceita Eduardo Teodoro como seu único salvador? </p>
+            <div class="escolhaContainer" id="areaAleatorio">
+                <div class="simArea">
+                    <p id="sim">[  ] sim</p>
+                </div>
+                <div class="naoArea">
+                    <p id="aleatorio">[  ] não</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="boasVindas" id="boasVindas">bem-vindo ao Reino, agora você é um dos 144 mil escolhidos,
+        procure a Rainbow Church mais próxima de você e seja feliz!</h3>
+    <script>
+        // criar variavel referente ao Sim
+        // criar um event listener de click para chamar a funcao de click
+        // criar uma funcao de click que fara aparecer o texto de bem vindo
+        // especificar que ao clicar no sim, o display none se torna display block
+
+        
+        var areaAleatorio = document.getElementById("areaAleatorio");
+        var aleatorio = document.getElementById("aleatorio");
+        var sim = document.getElementById("sim");
+        var boasVindas = document.getElementById("boasVindas")
+
+
+        aleatorio.addEventListener("mouseover", movimentar);
+        aleatorio.addEventListener("touchstart", movimentar);
+        sim.addEventListener("click", exibirMensagem);
+
+        function movimentar() {
+            var naoArea = document.querySelector(".naoArea");
+            var larguraNaoArea = naoArea.clientWidth;
+            var alturaNaoArea = naoArea.clientHeight;
+
+        var novaPosicaoX = Math.floor(Math.random() * (larguraNaoArea - aleatorio.offsetWidth));
+        var novaPosicaoY = Math.floor(Math.random() * (alturaNaoArea - aleatorio.offsetHeight));
+
+        aleatorio.style.left = novaPosicaoX + "px";
+        aleatorio.style.top = novaPosicaoY + "px";
+        }
+        aleatorio.addEventListener("mouseover", movimentar);
+        aleatorio.addEventListener("touchstart", movimentar);
+
+function exibirMensagem() {
+    window.alert("test")
+    boasVindas.style.display="block"
+
+}
+    </script>
+</body>
+
 </html>
