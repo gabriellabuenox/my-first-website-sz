@@ -107,11 +107,11 @@
 </head>
 
 <body>
-
-    <audio id="musica" src=""
-
+    <audio autoplay>
+        <source src="Pabllo Vittar - Rajadão (I AM PABLLO).mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento <code>audio</code>.
+    </audio>
     
-    <!-- Colocar um texto de bem vindo  -->
     <h1 class="title">hi, my name is gabi</h1>
     <h2>. ݁₊ ⊹ . ݁˖ . ݁esse é meu primeiro website. ݁₊ ⊹ . ݁˖ . </h2>
     <h2 class="subtitle">antes de tudo, tenho uma pergunta importante:</h2>
@@ -137,7 +137,6 @@
         var sim = document.getElementById("sim");
         var boasVindas = document.getElementById("boasVindas")
 
-
         aleatorio.addEventListener("mouseover", movimentar);
         aleatorio.addEventListener("touchstart", movimentar);
         sim.addEventListener("click", exibirMensagem);
@@ -156,13 +155,12 @@
         aleatorio.addEventListener("mouseover", movimentar);
         aleatorio.addEventListener("touchstart", movimentar);
 
-function exibirMensagem() {
-    boasVindas.style.display="block"
+    function exibirMensagem() {
+        boasVindas.style.display="block"
 
-}
+    }
 
     </script>
-
 
 </body>
 
