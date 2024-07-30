@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabi Code Test</title>
@@ -16,7 +17,7 @@
         }
 
         body {
-            background-color: #eecbee;
+            background-color: #EED6F0;
             font-family: 'Roboto Mono', monospace;
             font-size: 0.6em;
             text-align: center;
@@ -26,6 +27,7 @@
 
         .subtitle {
             margin-top: 200px;
+            margin-bottom: 10px;
         }
 
         p {
@@ -43,7 +45,7 @@
         .container {
             width: 70%;
             height: 100%;
-            background-color: #caabff;
+            background-color: #E4CEFF;
             border: 0.8px solid rgba(0, 0, 0, 0.733); /* Correção na borda */
             position: relative; /* Adiciona posição relativa ao contêiner */
         }
@@ -94,16 +96,21 @@
 
         .boasVindas {
             height: 1200px;
-            width: 100%;
-            background-color: rgb(127, 142, 255);
+            width: 70%;
+            background-color: #EED6F0;
             display: none;
-            align-items: center; /* Adiciona alinhamento vertical */
-            /* position: */
+            align-items: center; 
+            margin: auto; 
+            margin-top:5%; 
         }
     </style>
 </head>
 
 <body>
+
+    <audio id="musica" src=""
+
+    
     <!-- Colocar um texto de bem vindo  -->
     <h1 class="title">hi, my name is gabi</h1>
     <h2>. ݁₊ ⊹ . ݁˖ . ݁esse é meu primeiro website. ݁₊ ⊹ . ݁˖ . </h2>
@@ -113,10 +120,10 @@
             <p class="apelo">você aceita Eduardo Teodoro como seu único salvador? </p>
             <div class="escolhaContainer" id="areaAleatorio">
                 <div class="simArea">
-                    <p id="sim">[  ] sim</p>
+                    <p id="sim">sim</p>
                 </div>
                 <div class="naoArea">
-                    <p id="aleatorio">[  ] não</p>
+                    <p id="aleatorio">não</p>
                 </div>
             </div>
         </div>
@@ -124,11 +131,6 @@
     <h3 class="boasVindas" id="boasVindas">bem-vindo ao Reino, agora você é um dos 144 mil escolhidos,
         procure a Rainbow Church mais próxima de você e seja feliz!</h3>
     <script>
-        // criar variavel referente ao Sim
-        // criar um event listener de click para chamar a funcao de click
-        // criar uma funcao de click que fara aparecer o texto de bem vindo
-        // especificar que ao clicar no sim, o display none se torna display block
-
         
         var areaAleatorio = document.getElementById("areaAleatorio");
         var aleatorio = document.getElementById("aleatorio");
@@ -155,11 +157,13 @@
         aleatorio.addEventListener("touchstart", movimentar);
 
 function exibirMensagem() {
-    window.alert("test")
     boasVindas.style.display="block"
 
 }
+
     </script>
+
+
 </body>
 
 </html>
